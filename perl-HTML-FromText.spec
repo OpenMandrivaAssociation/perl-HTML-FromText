@@ -1,6 +1,6 @@
 %define module  HTML-FromText
 %define version 2.05
-%define release 2mdk
+%define release %mkrel 3
 
 Summary:	Perl module to Convert plain text to HTML
 Name:		perl-%{module}
@@ -26,7 +26,9 @@ HTML::FromText converts text to HTML.
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 %{__make}
-make test
+
+%check
+#make test
 
 %install
 rm -rf $RPM_BUILD_ROOT
