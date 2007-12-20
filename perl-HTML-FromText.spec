@@ -14,6 +14,7 @@ BuildRequires:	perl-devel >= 5.6
 BuildRequires:	perl-Email-Find
 BuildRequires:	perl-Exporter-Lite
 BuildRequires:	perl-HTML-Parser
+BuildRoot:      %{_tmppath}/%{name}-buildroot
 BuildArch:	noarch
 
 %description
