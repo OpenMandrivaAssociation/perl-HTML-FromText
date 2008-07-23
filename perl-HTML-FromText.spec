@@ -1,6 +1,6 @@
 %define module  HTML-FromText
 %define version 2.05
-%define release %mkrel 3
+%define release %mkrel 5
 
 Summary:	Perl module to Convert plain text to HTML
 Name:		perl-%{module}
