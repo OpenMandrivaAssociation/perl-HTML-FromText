@@ -1,15 +1,13 @@
 %define upstream_name    HTML-FromText
-%define upstream_version 2.07
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	2.07
+Release:	2
 
 Summary:	Perl module to Convert plain text to HTML
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/rjbs/HTML-FromText
-Source0:	https://cpan.metacpan.org/authors/id/R/RJ/RJBS/HTML-FromText-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/R/RJ/RJBS/HTML-FromText-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -22,7 +20,7 @@ BuildArch:	noarch
 HTML::FromText converts text to HTML.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -44,9 +42,7 @@ make
 %changelog
 * Mon Aug 03 2009 Jérôme Quelin <jquelin@mandriva.org> 2.50.0-1mdv2010.0
 + Revision: 407754
-- rebuild using %%perl_convert_version
-
-* Wed Jul 23 2008 Thierry Vignaud <tv@mandriva.org> 2.05-5mdv2009.0
+- rebuild using %2.07 Wed Jul 23 2008 Thierry Vignaud <tv@mandriva.org> 2.05-5mdv2009.0
 + Revision: 241469
 - rebuild
 - kill re-definition of %%buildroot on Pixel's request
